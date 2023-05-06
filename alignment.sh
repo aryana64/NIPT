@@ -7,6 +7,7 @@
 #SBATCH --time=24:00:00
 #SBATCH --output=/beegfs/data/hpcws/ws1/anudarieva-exocmar/scripts/logs/%x-%j-%N.out 
 source activate environments  #processing the environment to work with
+scp -rp genedev2:/sf/storage/gmo/hic/out/_RawReads/2022-08-16_Novogene_data/X201SC22041027-Z01-F003/01.RawData/N32 /home/aryana64 #copy the samples from remote server to local machine  (ssh-agent is used) 
 conda install bwa 
 conda install -c bioconda samtools
 REF=/beegfs/data/hpcws/ws1/anudarieva-exocmar/hg38/hg38.fa
